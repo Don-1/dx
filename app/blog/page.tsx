@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Blog: React.FC = () => {
-  return <div>A picture is worth a thousand words</div>;
+  return <div>Captains (b)Log</div>;
 };
 
 export default Blog;
