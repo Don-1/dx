@@ -1,6 +1,5 @@
 import React from 'react';
 import { Logo } from './Logo';
-import { Button } from './Button';
 import { NavItems } from '../navitems';
 
 const Navbar: React.FC<{ toggle: () => void }> = ({ toggle }) => {
@@ -29,9 +28,6 @@ const Navbar: React.FC<{ toggle: () => void }> = ({ toggle }) => {
           <ul className='hidden md:flex gap-x-6 text-white'>
             <NavItems />
           </ul>
-          <div className='hidden md:block'>
-            <Button />
-          </div>
         </div>
       </div>
     </div>
