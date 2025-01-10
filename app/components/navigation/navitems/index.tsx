@@ -8,10 +8,10 @@ type NavItem = {
 
 const NavItemList: NavItem[] = [
   { route: 'Home', href: '/' },
-  { route: 'Snaps', href: '/blog' },
-  { route: 'Calendar', href: '/calendar' },
+  { route: `D's Meds`, href: '/blog' },
+  { route: 'Projects', href: '/projects' },
   { route: 'About Me', href: '/about' },
-  { route: 'Contact Me', href: '/contacts' },
+  // { route: 'Contact Me', href: '/contacts' },
 ];
 
 export const NavItems: React.FC<{ toggel?: () => void }> = ({ toggel }) => {
