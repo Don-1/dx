@@ -6,7 +6,7 @@ const Contacts: React.FC = () => {
       <div className="grid sm:grid-cols-2 items-start gap-14 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md font-[sans-serif]">
         <div>
           <h1 className="text-grey-800 text-3xl font-extrabold">
-            Let&apos;s Talk
+            {`Let's Talk`}
           </h1>
           <p>
             Want to capture some memories or freeze that moment in time? Then

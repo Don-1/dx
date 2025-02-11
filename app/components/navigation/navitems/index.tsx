@@ -8,7 +8,7 @@ type NavItem = {
 
 const NavItemList: NavItem[] = [
   { route: 'Home', href: '/' },
-  { route: 'D&apos;s Meds', href: '/blog' },
+  { route: `D's Meds`, href: '/blog' },
   { route: 'Projects', href: '/projects' },
   { route: 'About Me', href: '/about' },
   // { route: 'Contact Me', href: '/contacts' },

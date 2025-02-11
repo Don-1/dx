@@ -1,8 +1,9 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import React from 'react';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const pathName = usePathname();
   const isHome = pathName === '/';
   return (

@@ -2,6 +2,7 @@ import './globals.css';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
 import { MainContent } from './components/mainContent';
+import React from 'react';
 
 export const metadata = {
   title: 'DXPosed',
