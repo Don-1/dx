@@ -1,16 +1,16 @@
-import React from "react";
-import { Logo } from "./Logo";
-import { NavItems } from "../navitems";
-import { usePathname } from "next/navigation";
+import React from 'react';
+import { Logo } from './Logo';
+import { NavItems } from '../navitems';
+import { usePathname } from 'next/navigation';
 
 const Navbar: React.FC<{ toggle: () => void }> = ({ toggle }) => {
   const pathName = usePathname();
-  const isHome = pathName === "/";
+  const isHome = pathName === '/';
 
   return (
     <div
       className={`w-full h-20 ${
-        isHome ? "bg-transparent" : "bg-sky-200"
+        isHome ? 'bg-transparent' : 'bg-sky-200'
       } fixed top-0 left-0 z-50 p-4`}
     >
       <div className="container mx-auto px-4 h-full">

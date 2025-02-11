@@ -36,7 +36,7 @@ export const Logo: React.FC = () => {
           alt='Logo'
           width={width < 1024 ? '80' : '100'}
           height={width < 1024 ? '40' : '34'}
-          className='relative'
+          className="relative"
         />
       </Link>
       <div style={{ display: showButton ? 'block' : 'none' }}>

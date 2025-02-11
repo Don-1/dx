@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { usePathname } from "next/navigation";
-import { NavItems } from "../navigation/navitems";
+import { usePathname } from 'next/navigation';
+import { NavItems } from '../navigation/navitems';
 
 const Footer = () => {
   const pathName = usePathname();
-  const isHome = pathName === "/";
+  const isHome = pathName === '/';
   return (
     <div
       className={` ${
-        isHome ? "bg-transparent" : "bg-sky-200"
+        isHome ? 'bg-transparent' : 'bg-sky-200'
       } py-4 text-center text-white fixed bottom-0 w-full z-50`}
     >
       {/* <div className="container mx-auto px-4 h-full"> */}
