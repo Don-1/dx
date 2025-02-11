@@ -7,7 +7,10 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
-    "quotes": ["error", "single"],
+    "quotes": ["error", "single", {
+      "avoidEscape": true,
+      "allowTemplateLiterals": true
+    }],
     "no-unused-vars": "warn",
     "no-empty-function": "warn"
   }
