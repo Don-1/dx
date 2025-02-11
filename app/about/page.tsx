@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const About: React.FC = () => {
@@ -9,7 +10,7 @@ const About: React.FC = () => {
         </h2>
         <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-8 text-center mt-12">
           <div className="bg-white py-4 px-2 shadow-md rounded-lg hoer:scale-110 transition-all duration-500">
-            <img
+            <Image
               src={'/images/profile.jpg'}
               className="w-36 h-36 rounded-full inline-block"
               alt="Profile"
