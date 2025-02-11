@@ -11,7 +11,7 @@ const Navbar: React.FC<{ toggle: () => void }> = ({ toggle }) => {
     <div
       className={`w-full h-20 ${
         isHome ? "bg-transparent" : "bg-sky-200"
-      } fixed top-0 left-0 w-full z-50 p-4`}
+      } fixed top-0 left-0 z-50 p-4`}
     >
       <div className="container mx-auto px-4 h-full">
         <div className="flex justify-between items-center h-full">
