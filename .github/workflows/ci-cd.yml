@@ -54,6 +54,7 @@ jobs:
       # Step 2: Deploy to Vercel
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
+        run: vercel deploy --prod --yes
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Secure Vercel token
           vercel-args: '--prod' # Deploy to production
