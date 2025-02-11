@@ -1,0 +1,60 @@
+name: CI/CD for dx Next.js app
+
+on:
+  push:
+    branches:
+      - main # Triggers on pushes to the 'main' branch
+  pull_request:
+    branches:
+      - main # Runs on pull requests targeting the 'main' branch
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Ensure compatibility with your Next.js version
+          cache: 'yarn'
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: yarn install
+
+      # Step 4: Lint the code
+      - name: Lint code
+        run: yarn lint
+
+      # Step 5: Run tests
+      - name: Run tests
+        run: yarn test
+
+      # Step 6: Build the application
+      - name: Build application
+        run: yarn build
+
+  deploy:
+    name: Deploy to Vercel
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Deploy to Vercel
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Secure Vercel token
+          vercel-args: '--prod' # Deploy to production
+          working-directory: .
