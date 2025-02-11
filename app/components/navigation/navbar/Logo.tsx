@@ -33,8 +33,8 @@ export const Logo: React.FC = () => {
       <Link href={'/'} style={{ display: showButton ? 'none' : 'block' }}>
         <Image
           src={'/images/logo.png'}
-          alt='Logo'
-          width={width < 1024 ? '80' : '100'}
+          alt="Logo"
+          width={width < 1024 ? '80' : '90'}
           height={width < 1024 ? '40' : '34'}
           className="relative"
         />
