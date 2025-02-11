@@ -9,13 +9,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Home() {
   return (
-    <main className="h-screen w-screen">
+    <main className="relative h-full w-screen overflow-hidden">
       <Swiper
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         effect="fade"
         speed={1000}
         autoplay={{ delay: 9000, disableOnInteraction: false }}
-        className="h-full"
+        className="h-full w-full"
       >
         {/* Slide 1 */}
         <SwiperSlide>

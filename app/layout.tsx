@@ -1,6 +1,7 @@
-import "./globals.css";
-import Navigation from "./components/navigation";
-import Footer from "./components/footer";
+import './globals.css';
+import Navigation from './components/navigation';
+import Footer from './components/footer';
+import { MainContent } from './components/mainContent';
 
 export const metadata = {
   title: 'DXPosed',
@@ -15,8 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen">
+        <MainContent>{children}</MainContent>
+        {/* <main className={`${isHome ? "" : "pt-20"} flex-grow`}>{children}</main> */}
         <Navigation />
-        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
