@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
   return (
     <div
       className={` ${
-        isHome ? 'bg-transparent' : 'bg-sky-200'
-      } py-4 text-center text-white fixed bottom-0 w-full z-50`}
+        isHome ? 'bg-transparent text-white' : 'bg-slate-200 text-[#999]'
+      } py-4 text-center fixed bottom-0 w-full z-50`}
     >
       <div className="container mx-auto">
         <p>
