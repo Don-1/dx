@@ -10,7 +10,7 @@ const Navbar: React.FC<{ toggle: () => void }> = ({ toggle }) => {
   return (
     <div
       className={`w-full h-20 ${
-        isHome ? 'bg-transparent' : 'bg-sky-200'
+        isHome ? 'bg-transparent' : 'bg-slate-200'
       } fixed top-0 left-0 z-50 p-4`}
     >
       <div className="container mx-auto px-4 h-full">
@@ -28,12 +28,14 @@ const Navbar: React.FC<{ toggle: () => void }> = ({ toggle }) => {
               viewBox="0 0 24 24"
             >
               <path
-                fill="#fff"
+                fill={`${isHome ? '#fff' : 'text-[#999]'}`}
                 d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"
               />
             </svg>
           </button>
-          <ul className="hidden md:flex gap-x-6 text-white">
+          <ul
+            className={`hidden md:flex gap-x-6 ${isHome ? 'text-white' : 'text-[#999]'}`}
+          >
             <NavItems />
           </ul>
         </div>
