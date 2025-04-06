@@ -23,23 +23,23 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18' # Ensure compatibility with your Next.js version
-          cache: 'yarn'
+          cache: 'npm'
 
       # Step 3: Install dependencies
       - name: Install dependencies
-        run: yarn install
+        run: npm ci
 
       # Step 4: Lint the code
       - name: Lint code
-        run: yarn lint
+        run: npm run lint
 
       # Step 5: Run tests
       - name: Run tests
-        run: yarn test
+        run: npm test
 
       # Step 6: Build the application
       - name: Build application
-        run: yarn build
+        run: npm run build
 
   deploy:
     name: Deploy to Vercel
