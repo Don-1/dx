@@ -13,9 +13,7 @@ const Footer: React.FC = () => {
       } py-4 text-center fixed bottom-0 w-full z-50`}
     >
       <div className="container mx-auto">
-        <p>
-          &copy; {new Date().getFullYear()} My Portfolio. All rights reserved.
-        </p>
+        <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
       </div>
       {/* </div> */}
     </div>

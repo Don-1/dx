@@ -11,17 +11,10 @@ const About: React.FC = () => {
         <div className="grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 gap-8 text-center mt-12">
           <div className="bg-white py-4 px-2 shadow-md rounded-lg hoer:scale-110 transition-all duration-500">
             <div className="relative w-36 h-36 inline-block">
-              <Image
-                src={'/images/profile.jpg'}
-                className="rounded-full"
-                alt="Profile"
-                fill
-              />
+              <Image src={'/images/profile.jpg'} className="rounded-full" alt="Profile" fill />
             </div>
             <div className="mt-4">
-              <h4 className="text-gray-800 text-base font-bold">
-                Donovan Lindsay
-              </h4>
+              <h4 className="text-gray-800 text-base font-bold">Donovan Lindsay</h4>
               <p className="text-gray-600 text-xs mt-1">Software Engineer</p>
               <div className="space-x-4 mt-4">
                 <button

@@ -1,9 +1,11 @@
 import './globals.css';
-import Navigation from './components/navigation';
+
+import { Metadata } from 'next';
+import React from 'react';
+
 import Footer from './components/footer';
 import { MainContent } from './components/mainContent';
-import React from 'react';
-import { Metadata } from 'next';
+import Navigation from './components/navigation';
 
 export const metadata: Metadata = {
   title: 'DX',
@@ -16,11 +18,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen">

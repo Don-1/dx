@@ -5,12 +5,10 @@ const Contacts: React.FC = () => {
     <div className="mt-6">
       <div className="grid sm:grid-cols-2 items-start gap-14 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md font-[sans-serif]">
         <div>
-          <h1 className="text-grey-800 text-3xl font-extrabold">
-            {`Let's Talk`}
-          </h1>
+          <h1 className="text-grey-800 text-3xl font-extrabold">{`Let's Talk`}</h1>
           <p>
-            Want to capture some memories or freeze that moment in time? Then
-            reach out so we can make your memories last forever.
+            Want to capture some memories or freeze that moment in time? Then reach out so we can
+            make your memories last forever.
           </p>
           <div className="mt-12">
             <h2 className="text-gray-800 text-base font-bold">Email</h2>
@@ -30,10 +28,7 @@ const Contacts: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <a
-                  href="javascript:void(0)"
-                  className="text-sky-200 text-sm ml-4"
-                >
+                <a href="javascript:void(0)" className="text-sky-200 text-sm ml-4">
                   <small className="block">Mail</small>
                   <strong>info@example.com</strong>
                 </a>
