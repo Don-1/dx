@@ -11,6 +11,7 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
+    "types": ["jest", "node", "cypress"],
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
@@ -23,6 +24,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts","**/*.test.ts", "**/*.cy.ts"],
   "exclude": ["node_modules"]
 }
