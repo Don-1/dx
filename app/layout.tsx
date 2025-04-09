@@ -3,9 +3,9 @@ import './globals.css';
 import { Metadata } from 'next';
 import React from 'react';
 
-import Footer from './components/footer';
-import { MainContent } from './components/mainContent';
-import Navigation from './components/navigation';
+import Footer from '../components/footer';
+import { MainContent } from '../components/mainContent';
+import Navigation from '../components/navigation';
 
 export const metadata: Metadata = {
   title: 'DX',
