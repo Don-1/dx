@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+
 import { HeroSlider } from '../components/ui/HeroSlider';
 import { SlideType } from '../lib/types/SlideType';
 
