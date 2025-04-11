@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
+    "lint": "next lint",
     "fix": "npx eslint . --fix",
     "format": "prettier --write .",
     "test": "jest",
