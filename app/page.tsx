@@ -1,39 +1,17 @@
 'use client';
 
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
 import React from 'react';
-import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { HeroSlider } from '../components/ui/HeroSlider';
+import { SlideType } from '../lib/types/SlideType';
 
 export default function Home() {
+  const slides: SlideType[] = [
+    { backgroundImage: '/images/slide1.jpg' },
+    { backgroundImage: '/images/slide2.jpg' },
+  ];
   return (
     <main className="relative h-full w-screen overflow-hidden">
-      <Swiper
-        modules={[Autoplay, EffectFade, Navigation, Pagination]}
-        effect="fade"
-        speed={1000}
-        autoplay={{ delay: 9000, disableOnInteraction: false }}
-        className="h-full w-full"
-      >
-        {/* Slide 1 */}
-        <SwiperSlide>
-          <div
-            className="h-full w-full bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/slide1.jpg')" }}
-          ></div>
-        </SwiperSlide>
-        {/* Slide 2 */}
-        <SwiperSlide>
-          <div
-            className="h-full w-full bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/slide2.jpg')" }}
-          ></div>
-        </SwiperSlide>
-      </Swiper>
+      <HeroSlider slides={slides} />
     </main>
   );
 }
