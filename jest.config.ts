@@ -4,6 +4,12 @@
  */
 
 import type { Config } from 'jest';
+import nextJest from 'next/jest.js';
+
+const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+  dir: './',
+});
 
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
@@ -90,7 +96,14 @@ const config: Config = {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    '^swiper(.*)$': '<rootDir>/jest.mock.js',
+    '\\.(css|less|scss|sass)$': '<rootDir>/jest.mock.js',
+    '^swiper/react$': '<rootDir>/__mocks__/swiper/swiper-react-mock.tsx',
+    'swiper/react': 'swiper/swiper-react.d.ts',
+    'swiper/modules': 'swiper/types/modules/index.d.ts',
+    'swiper/css': 'swiper/swiper.min.css',
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -137,7 +150,7 @@ const config: Config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
@@ -178,10 +191,12 @@ const config: Config = {
   // transform: undefined,
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  // transformIgnorePatterns: [
-  //   "/node_modules/",
-  //   "\\.pnp\\.[^\\/]+$"
-  // ],
+  transformIgnorePatterns: [
+    '/node_modules/',
+    '\\.pnp\\.[^\\/]+$',
+    'node_modules/(?!(swiper)/)',
+    'node_modules/(?!swiper|ssr-window|dom7).*/',
+  ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
@@ -196,4 +211,4 @@ const config: Config = {
   // watchman: true,
 };
 
-export default config;
+export default createJestConfig(config);
